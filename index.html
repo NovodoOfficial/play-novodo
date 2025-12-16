@@ -1,1 +1,89 @@
-<h1>Test</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WMG SMP</title>
+
+    <style>
+        /* Load Mojangles font */
+        @font-face {
+            font-family: 'Mojangles';
+            src: url('mojangles.otf') format('opentype');
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(180deg, #0b0b0b, #1a1a1a);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Mojangles', monospace;
+            color: white;
+        }
+
+        /* Logo */
+        .logo {
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+
+        .logo img {
+            width: 600px;
+            max-width: 90%;
+            image-rendering: pixelated;
+        }
+
+        /* Center container */
+        .center {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Play button */
+        .play-button {
+            width: 250px;
+            height: 150px;
+            background: linear-gradient(#3bd13b, #1e8f1e);
+            border: 6px solid #145214;
+            border-radius: 8px;
+            font-size: 48px;
+            color: #eaffea;
+            cursor: pointer;
+            text-shadow: 2px 2px 0 #0f3f0f;
+            box-shadow: inset 0 4px 0 rgba(255,255,255,0.2),
+                        0 6px 0 #0b3b0b;
+            transition: transform 0.1s, box-shadow 0.1s;
+        }
+
+        .play-button:hover {
+            filter: brightness(1.1);
+        }
+
+        .play-button:active {
+            transform: translateY(4px);
+            box-shadow: inset 0 4px 0 rgba(0,0,0,0.3),
+                        0 2px 0 #0b3b0b;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo -->
+    <div class="logo">
+        <img src="WMG_SMP.png" alt="WMG SMP Logo">
+    </div>
+
+    <!-- Play Button -->
+    <div class="center">
+        <button class="play-button">PLAY</button>
+    </div>
+
+</body>
+</html>
