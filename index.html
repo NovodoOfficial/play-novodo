@@ -1,89 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>WMG SMP</title>
 
     <style>
-        /* Load Mojangles font */
-        @font-face {
-            font-family: 'Mojangles';
-            src: url('mojangles.otf') format('opentype');
-        }
+      @font-face {
+          font-family: "Mojangles";
+          src: url("mojangles.otf") format("opentype");
+      }
 
-        * {
-            box-sizing: border-box;
-        }
+      * {
+          box-sizing: border-box;
+      }
 
-        body {
-            margin: 0;
-            height: 100vh;
-            background: linear-gradient(180deg, #0b0b0b, #1a1a1a);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-family: 'Mojangles', monospace;
-            color: white;
-        }
+      body {
+          margin: 0;
+          height: 100vh;
+          background: #121212;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          font-family: "Mojangles", monospace;
+          color: white;
+      }
 
-        /* Logo */
-        .logo {
-            margin-top: 40px;
-            margin-bottom: 60px;
-        }
+      .logo {
+          margin-top: 40px;
+          margin-bottom: 60px;
+          display: flex;
+          justify-content: center;
+      }
 
-        .logo img {
-            width: 600px;
-            max-width: 90%;
-            image-rendering: pixelated;
-        }
+      .logo img {
+        width: 1000px;
+      }
 
-        /* Center container */
-        .center {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+      .center {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
 
-        /* Play button */
-        .play-button {
-            width: 250px;
-            height: 150px;
-            background: linear-gradient(#3bd13b, #1e8f1e);
-            border: 6px solid #145214;
-            border-radius: 8px;
-            font-size: 48px;
-            color: #eaffea;
-            cursor: pointer;
-            text-shadow: 2px 2px 0 #0f3f0f;
-            box-shadow: inset 0 4px 0 rgba(255,255,255,0.2),
-                        0 6px 0 #0b3b0b;
-            transition: transform 0.1s, box-shadow 0.1s;
-        }
+      .play-button {
+          width: 200px;
+          height: 100px;
+          background-color: #3cbf3c;
+          border: 2px solid #2e8f2e;
+          border-radius: 10px;
+          font-size: 48px;
+          color: #ffffff;
+          cursor: pointer;
+          font-family: "Mojangles", monospace;
+      }
 
-        .play-button:hover {
-            filter: brightness(1.1);
-        }
+      .play-button:hover {
+          background-color: #46d146;
+      }
 
-        .play-button:active {
-            transform: translateY(4px);
-            box-shadow: inset 0 4px 0 rgba(0,0,0,0.3),
-                        0 2px 0 #0b3b0b;
-        }
+      .play-button:active {
+          background-color: #2fa02f;
+      }
     </style>
-</head>
-<body>
-
-    <!-- Logo -->
+  </head>
+  <body>
     <div class="logo">
-        <img src="WMG_SMP.png" alt="WMG SMP Logo">
+      <img src="WMG_SMP.png" alt="WMG SMP Logo" />
     </div>
 
-    <!-- Play Button -->
     <div class="center">
-        <button class="play-button">PLAY</button>
+      <button id="play" class="play-button">Play</button>
     </div>
 
-</body>
+    <script>
+      document.getElementById("play").addEventListener("click", () => {
+        window.location.href = "/game";
+      });
+    </script>
+  </body>
 </html>
